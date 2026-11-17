@@ -4986,7 +4986,7 @@ def player_api():
     if not media_client:
         return jsonify({"error": "Media server not connected"}), 500
 
-    action   = request.args.get('action')
+    action   = request.args.get('action') or None
     username = request.args.get('username')
 
     if action:
